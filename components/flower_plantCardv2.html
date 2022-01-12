@@ -1,0 +1,109 @@
+<div class="col-md-12">
+<div class="card plantCardV2">
+  <!-- <div class="card-img-top-flower tc">
+    <h2>
+      <?php echo $strain ?>
+    </h2>
+  </div> -->
+  <div class="card-header d-flex justify-content-between align-items-center card-img-top-flower">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" data-target="<?php echo '#' . $status . $plantID . '-info' ?>" href="<?php echo '#' . $status . $plantID . '-info' ?>"><?php echo $strain ?></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" data-target="<?php echo '#' . $status . $plantID . '-form' ?>" href="<?php echo '#' . $status . $plantID . '-form' ?>">
+              <img src="img/gear.svg" class="gearSVG" alt="Settings">
+            </a>
+        </li>
+      </ul>
+  </div>
+  <div class="card-body p-0">
+      <div class="tab-content">
+          <div class="tab-pane active" id="<?php echo $status . $plantID . '-info' ?>" role="tabpanel">
+              <ul class="list-group list-group-flush ml-0 mb-2">
+                  <li class="list-group-item d-flex justify-content-between align-items-center [hide_empty:version]">
+                      Origin
+                      <span class="badge"><?php echo $origin ?></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center [hide_empty:download_count]">
+                      Status
+                      <span class="badge"><?php echo $status ?></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center [hide_empty:file_size]">
+                      Grow Medium
+                      <span class="badge"><?php echo $growMedium ?></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center [hide_empty:file_count]">
+                      Grow Location
+                      <span class="badge"><?php echo $growLocation ?></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center [hide_empty:create_date]">
+                      Start Date
+                      <span class="badge"><?php echo $startDate ?></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center [hide_empty:create_date]">
+                      Transfer Date
+                      <span class="badge">
+                        <?php
+                        if(isset($transferDate)) {
+                          echo $transferDate;
+                        } else {
+                          echo 'Not Transferred Yet';
+                        } ?>
+                      </span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center [hide_empty:version]">
+                      Notes:
+                      <span class="badge badgeComments"><?php echo $comments ?></span>
+                  </li>
+              </ul>
+          </div>
+          <div class="tab-pane p-4" id="<?php echo $status . $plantID . '-form' ?>" role="tabpanel">
+            <div id="tab-content">
+              <?php
+              echo 'Plant ID: ' . $plantID . '<br>';
+              echo '<form method="post" action="editplant.php">
+                <input type="text" name="plantID" value=' . $plantID . ' placeholder="<? php echo $plantID; ?>" hidden>
+                <input type="submit" class="" name="editPlantSubmit" value="Edit Plant">
+              </form>';
+              echo '<form method="post" action="deleteplant.php">
+                <input type="text" name="plantID" value=' . $plantID . ' placeholder="<? php echo $plantID; ?>" hidden>
+                <input type="text" name="strain" value=' . $strain . ' placeholder="<? php echo $strain; ?>" hidden>
+                <input type="submit" class="" name="deletePlantSubmit" value="Delete or Abandon Plant">
+              </form>';
+              ?>
+            </div>
+          </div>
+          <!-- development of images -->
+          <div class="plantImgDiv text-center">
+            <!-- <img src="img/IMG_1405.png" class="img-fluid" id="" alt="Responsive image">
+            <div class="plantImgThumbnails text-center">
+              <img src="img/IMG_1406.png" id="" alt="..." class="img-thumbnail">
+              <img src="img/IMG_1524.png" id="" alt="..." class="img-thumbnail">
+              <img src="img/IMG_1526.png" id="" alt="..." class="img-thumbnail">
+              <img src="img/cameraPlus.svg" id="" alt="..." class="img-thumbnail">
+              <img src="img/cameraPlus.svg" id="" alt="..." class="img-thumbnail">
+            </div> -->
+            <?php displayCardImgs() ?>
+
+
+          </div>
+        </div>
+    </div>
+
+  <div class="card-footer bg-transparent justify-content-between tc">
+
+        <?php
+        if(isset($transferDate)) {
+          echo 'Estimated Harvest Date: ' . $estHarvestDate;
+          echo '<form method="post" action="harvestplant.php">
+            <input type="text" name="plantID" value=' . $plantID . ' placeholder="<? php echo $plantID; ?>" hidden>
+            <input type="submit" class="push-button-3d" name="harvestPlantSubmit" value="Harvest">
+          </form>';
+        } else {
+          echo '<button>Transfer to Flower</button>';
+      } ?>
+
+  </div>
+</div>
+</div>

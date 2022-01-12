@@ -1,0 +1,70 @@
+<div class="col-md-6">
+<div class="card plantCard">
+  <div class="card-img-top-flower tc">
+    <h2>
+      <?php echo 'Plant ID: ' . $plantID ?>
+    </h2>
+      <!-- <img style="max-width:100%;" src="http://rndimg.com/ImageStore/OilPaintingBlue/800x400_OilPaintingBlue_9c0746faec414151968639a12471670a.jpg" alt="Multipurpose"> -->
+  </div>
+  <div class="card-body p-0">
+              <ul class="list-group list-group-flush ml-0 mb-2">
+                  <li class="list-group-item d-flex justify-content-between align-items-center [hide_empty:version]">
+                      Strain
+                      <span class="badge"><?php echo $strain ?></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center [hide_empty:version]">
+                      Origin
+                      <span class="badge"><?php echo $origin ?></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center [hide_empty:download_count]">
+                      Status
+                      <span class="badge"><?php echo $status ?></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center [hide_empty:file_size]">
+                      Grow Medium
+                      <span class="badge"><?php echo $growMedium ?></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center [hide_empty:file_count]">
+                      Grow Location
+                      <span class="badge"><?php echo $growLocation ?></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center [hide_empty:create_date]">
+                      Start Date
+                      <span class="badge"><?php echo $startDate ?></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center [hide_empty:create_date]">
+                      Transfer Date
+                      <span class="badge">
+                        <?php
+                        if(isset($transferDate)) {
+                          echo $transferDate;
+                        } else {
+                          echo 'Not Transferred Yet';
+                        } ?>
+                      </span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center [hide_empty:create_date]">
+                      Harvest Date
+                      <span class="badge"><?php echo $harvestDate ?></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center [hide_empty:create_date]">
+                      Harvest Yield (in grams)
+                      <span class="badge"><?php echo $harvestYield ?></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center [hide_empty:version]">
+                      Notes:
+                      <span class="badge badgeComments"><?php echo $comments ?></span>
+                  </li>
+              </ul>
+          </div>
+
+  <div class="card-footer bg-transparent justify-content-between tc">
+
+    <p>
+        User ID:
+        <?php echo $userID ?>
+    </p>
+
+  </div>
+</div>
+</div>

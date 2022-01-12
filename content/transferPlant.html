@@ -1,0 +1,54 @@
+<!-- MAIN CONTENT -->
+<div class="row">
+  <div class="col-md-12 headerPad">
+    <h2 class="tc">Transfer Plant # <?php echo $plantID; ?></h2>
+    <!-- form -->
+    <div class="addForm">
+    <form method="post" action="/scripts/transferPlant.php" role="addForm">
+      <div class="form-group">
+        <input type="text" name="plantID" value="<?php echo $plantID; ?>" hidden/>
+      </div>
+
+				<div class="form-group tc">
+						<h2><?php echo $strain; ?></h2>
+				</div>
+
+				<div class="form-group">
+					<label for="transferDateUpdate">
+						Transfer Date:
+					</label>
+					<input value="<?php echo $currentDate; ?>" type="date" class="form-control" id="transferDateUpdate" name="transferDateUpdate"/>
+				</div>
+
+				<div class="form-group">
+
+          <select class="form-control" name="statusUpdate" required hidden>
+            <option selected value="Flower">Flower</option>
+          </select>
+				</div>
+
+				<div class="form-group">
+					<label for="growLocationUpdate" required>
+						Grow Location
+					</label>
+          <select class="form-control" name="growLocationUpdate">
+            <option value="<?php echo $growLocation; ?>">Current: <?php echo $growLocation; ?></option>
+            <?php displayUserGrowLocationsForm(); ?>
+          </select>
+				</div>
+
+				<div class="form-group">
+					<label for="commentsUpdate">
+						Comments
+					</label>
+					<textarea class="form-control" cols="10" rows="4" id="commentsUpdate" name="commentsUpdate"><?php echo $comments; ?></textarea>
+				</div>
+
+
+				<button type="submit" class="btn btn-primary" value="addPlant" name="addPlant">
+					Transfer to Flower
+				</button>
+			</form>
+    </div>
+  </div>
+</div> <!--END MAIN CONTENT -->

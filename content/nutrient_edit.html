@@ -1,0 +1,24 @@
+<!-- MAIN CONTENT -->
+<div class="row mainContent">
+  <h3 class="tc">Edit Your Nutrient Schedules</h3>
+  <form method="post">
+    <table class="nutrientsTable tc">
+      <tr>
+        <th>Weekly Schedule</th>
+        <th><input type="text" name="1_0" value="<?php echo $nute1[0];?>"></th>
+        <th><input type="text" name="2_0" value="<?php echo $nute2[0];?>"></th>
+        <th><input type="text" name="3_0" value="<?php echo $nute3[0];?>"></th>
+        <th><input type="text" name="4_0" value="<?php echo $nute4[0];?>"></th>
+        <th><input type="text" name="5_0" value="<?php echo $nute5[0];?>"></th>
+      </tr>
+      <?php userNutrientDisplayEdit(); ?>
+    </table>
+    <br>
+    <p>
+      <button type="submit" class="btn btn-primary" name="nutrientSubmit">
+        Submit Updated Nutrients
+      </button>
+    </p>
+  </form>
+
+</div> <!--END MAIN CONTENT -->

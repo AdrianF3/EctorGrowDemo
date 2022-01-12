@@ -1,0 +1,39 @@
+<!-- MAIN CONTENT -->
+<div class="row mainContent">
+  <div class="alert alert-success alertSizing" role="alert">
+    <h4 class="alert-heading">Tip!</h4>
+    <p>
+        <ul>
+          <li>Plants repeat week three until they are transfered to the
+          flower phase of growth</li>
+          <li>Based on a personal nutrient schedule, more updates coming to
+          personalize your own nutrient schedule</li>
+        </ul>
+    </p>
+    <hr>
+    <p class="tc">*Calculated for a hydroponic grow using 5 gallon buckets*</p>
+  </div>
+  <table class="nutrientsTable tc">
+    <tr>
+      <th>Weekly Schedule</th>
+      <th><?php echo $nute1[0];?></th>
+      <th><?php echo $nute2[0];?></th>
+      <th><?php echo $nute3[0];?></th>
+      <th><?php echo $nute4[0];?></th>
+      <th><?php echo $nute5[0];?></th>
+      <th>Your Active Plants</th>
+    </tr>
+    <?php userNutrientDisplay(); ?>
+    <div class="col-md-12 currentOutput">
+      <?php calculateDays(); ?>
+    </div>
+  </table>
+  <p>
+    <br>
+    <a href="http://ectorgrow.com/nutrient-edit.php">
+      <button type="submit" class="btn btn-primary">
+        Edit Your Nutrients
+      </button>
+    </a>
+  </p>
+</div> <!--END MAIN CONTENT -->

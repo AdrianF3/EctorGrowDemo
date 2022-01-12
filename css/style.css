@@ -1,0 +1,364 @@
+/* Begin General - Entire Site */
+
+body {
+  background-color: #2d2a2a;
+  color: #ffffff;
+}
+
+.card {
+  /* background-color: #C4C0C0; */
+}
+
+.exampleDemo {
+  background-color: #928B8B;
+  border-radius: 20px;
+  color: #ffffff;
+}
+
+.exampleDemo img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.loginForm {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.registerForm {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alertSizing {
+  width: 75%;
+  margin: auto;
+}
+
+.midDivSizing {
+    /* width: 50%; */
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.delForm button{
+    background-color: #2d2a2a;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+/* img {
+    transition:transform 0.25s ease;
+}
+
+.exampleDemo img:hover {
+    -webkit-transform:scale(1.8);
+    transform:scale(1.8);
+} */
+
+.exampleDemo div {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1.5em;
+}
+
+.exampleDemo h2 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#footer {
+  padding-top: 2em;
+}
+
+.mainContent {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainContent ul {
+  list-style-type: square;
+  list-style-position: inside;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding: 1.5em;
+  line-height: 2.5;
+}
+
+.badgeComments {
+  text-align: right;
+  white-space: revert;
+  padding-left: 2em;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.profileForm {
+  width: 70%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  margin: 1em;
+}
+
+.plantImgThumbnails img {
+  height: 200px;
+  width: 200px;
+  margin: 1.5em;
+}
+
+.plantCard {
+  width:400px;
+  margin: 20px auto;
+  color: black;
+}
+
+.plantCardV2 {
+  width: 80%;
+  margin: 20px auto;
+  color: black;
+}
+
+.plantImgDiv {
+  width: 80%;
+  margin: auto;
+  background-color: #000000;
+  border-radius: 5px;
+}
+
+.vegPlantCard {
+  width:400px;
+  margin: 20px auto;
+  color: black;
+}
+
+.card-img-top-veg {
+  background-color: #56c8cd;
+}
+.card-img-top-flower {
+  background-color: #73cd99;
+}
+.card-img-top-harvested {
+  background-color: #4f9d69;
+}
+
+
+.tc {
+  text-align: center;
+}
+
+.headerPad {
+  padding-top: 1.5em;
+  padding-bottom: 1.2em;
+}
+
+
+.addForm {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.deletePlantForm {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.abandonPlantForm {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+.annualTotalsTable {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.annualTotalsTable tr:last-child{
+  border-top: 1px solid #ffffff;
+}
+
+.nutrientsTable {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+.nutrientsTable th {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.nutrientsTable td {
+  padding: 0.5rem;
+}
+
+.nutrientsTable tr:nth-child(odd) {
+  background-color: #7e7777;
+  color: #fff;
+}
+
+.currentOutput {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+
+.push-button-3d {
+    box-shadow: 0 4px #c1a23c;
+    color: #5e4800;
+    background-color: #ffd95e;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all .2s ease;
+    font-weight: 900;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5rem;
+}
+
+.push-button-3d:active {
+    box-shadow: 0 1px #c1a23c;
+    transform: translateY(3px);
+}
+
+.logoImg {
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    padding-bottom: 3em;
+}
+
+.exampleDemo {
+  padding-top: 1.5em;
+  padding-bottom: 2em;
+  margin-bottom: 1em;
+}
+
+.signUp {
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+}
+
+.futureUpdates {
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+}
+
+.navBar {
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-bottom: 2em;
+}
+
+.btmFooter {
+    padding-top: 2em;
+    /* border-top: black solid 3px; */
+    margin-top: 3em;
+    font-weight: 100;
+    /* font-size: 2; */
+}
+
+.btmFooterRight {
+    text-align: right;
+    display: inline;
+    padding-right: 3em;
+}
+
+.btmFooterRight a {
+  color: #ffffff;
+  padding-right: 1.5em;
+}
+
+.btmFooterleft {
+    display: inline;
+    padding-left: 3em;
+    color: #ffffff;
+}
+
+.profileTable {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profileTable td {
+  padding-left: 1em;
+  padding-right: 1em;
+  vertical-align: baseline;
+}
+
+.profileTable td:last-child {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.profileTable th {
+}
+
+.numField {
+  width: 3em;
+}
+
+/* End General - Entire Site */
+
+
+
+/* Begin Header */
+
+/* End Header */
+
+/* Begin SVG */
+
+.gearSVG {
+    vertical-align: middle;
+    border-style: none;
+    height: auto;
+    width: 2em;
+}
+
+
+.signup {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* End SVG */
+
+
+/* Begin index Content */
+
+/* End index Content */
+
+
+/* Begin Footer */
+
+/* End Footer */

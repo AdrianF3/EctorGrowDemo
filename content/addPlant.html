@@ -1,0 +1,131 @@
+<!-- MAIN CONTENT -->
+<div class="row">
+  <div class="col-md-12 headerPad">
+    <h2 class="tc">Add a Plant</h2>
+    <div class="alert alert-success alertSizing" role="alert">
+      <h4 class="alert-heading">Tip!</h4>
+      <hr>
+      <p class="tc">Changes to 'Strain' & 'Grow Locations' are managed under My Profile.</p>
+    </div>
+    <!-- form -->
+    <div class="addForm">
+    <form method="post" role="addForm">
+				<div class="form-group">
+					<label for="strainInput">
+						Strain
+					</label>
+
+					<!-- <input type="text" class="form-control" id="strainInput" name="strainInput" required/> -->
+          <select class="form-control" name="strainInput" id="strainInput">
+            <option value="na" selected disabled>Pick One</option>
+            <?php displayUserSeedsForm(); ?>
+          </select>
+				</div>
+
+				<div class="form-group">
+					<label for="originInput">
+						Origin
+					</label>
+          <select class="form-control" name="originInput" required>
+            <option value="na" selected disabled>Pick One</option>
+            <option value="Clone">Clone</option>
+            <option value="Seed">Seed</option>
+          </select>
+				</div>
+
+				<div class="form-group">
+					<label for="startDateInput">
+						Start Date:
+					</label>
+					<input placeholder="yyyy-mm-dd" type="date" class="form-control" id="startDateInput" name="startDateInput" required />
+				</div>
+
+				<div class="form-group">
+					<label for="statusInput">
+						Status
+					</label>
+          <select class="form-control" name="statusInput" required>
+            <option value="na" selected disabled>Pick One</option>
+            <option value="Veg">Veg</option>
+            <option value="Flower">Flower</option>
+            <option value="Harvested">Harvested</option>
+            <option value="Harvested">Abandoned</option>
+          </select>
+				</div>
+
+				<div class="form-group">
+					<label for="growMediumInput" required>
+						Grow Medium
+					</label>
+          <select class="form-control" name="growMediumInput">
+            <option value="na" selected disabled>Pick One</option>
+            <option value="Soil">Soil</option>
+            <option value="Hydro">Hydro</option>
+          </select>
+				</div>
+
+				<div class="form-group">
+					<label for="growLocationInput" required>
+						Grow Location
+					</label>
+
+
+          <!-- <option selected value="Veg_SoilA">Veg_SoilA</option>
+          <option value="Veg_SoilB">Veg_SoilB</option>
+          <option value="Veg_HydroA">Veg_HydroA</option>
+          <option value="Veg_HydroB">Veg_HydroB</option>
+          <option value="Flower_SoilA">Flower_SoilA</option>
+          <option value="Flower_SoilB">Flower_SoilB</option>
+          <option value="Flower_HydroA">Flower_HydroA</option>
+          <option value="Flower_HydroB">Flower_HydroB</option>';
+           -->
+
+
+
+          <!-- <select class="form-control" name="growLocationInput">
+            <option value="na" selected disabled>Pick One</option>
+            <option value="Veg_SoilA">Veg_SoilA</option>
+            <option value="Veg_SoilB">Veg_SoilB</option>
+            <option value="Veg_HydroA">Veg_HydroA</option>
+            <option value="Veg_HydroB">Veg_HydroB</option>
+            <option value="Flower_SoilA">Flower_SoilA</option>
+            <option value="Flower_SoilB">Flower_SoilB</option>
+            <option value="Flower_HydroA">Flower_HydroA</option>
+            <option value="Flower_HydroB">Flower_HydroB</option>
+          </select> -->
+
+          <select class="form-control" name="growLocationInput">
+            <option value="na" selected disabled>Pick One</option>
+            <?php displayUserGrowLocationsForm(); ?>
+          </select>
+				</div>
+
+        <div class="form-group">
+					<label for="harvestDateInput">
+						Harvest Date:
+					</label>
+					<input placeholder="yyyy-mm-dd" type="date" class="form-control" name="harvestDateInput" />
+				</div>
+
+				<div class="form-group">
+					<label for="harvestYieldInput">
+						Yield (in grams)
+					</label>
+					<input type="number" class="form-control" id="harvestYieldInput" name="harvestYieldInput" />
+				</div>
+
+				<div class="form-group">
+					<label for="commentsInput">
+						Comments
+					</label>
+					<textarea class="form-control" cols="10" rows="4" id="commentsInput" name="commentsInput"></textarea>
+				</div>
+
+
+				<button type="submit" class="btn btn-primary" value="addPlant" name="addPlant">
+					Submit
+				</button>
+			</form>
+    </div>
+  </div>
+</div> <!--END MAIN CONTENT -->

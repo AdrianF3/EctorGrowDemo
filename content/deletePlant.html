@@ -1,0 +1,38 @@
+<!-- MAIN CONTENT -->
+<div class="row">
+  <div class="col-md-12 headerPad tc">
+    <h2 class="tc">Are you sure you want to Delete or Abandon Plant # <?php echo $plantID . "?"; ?></h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 headerPad tc">
+    <div class="abandonPlantForm">
+      <form method="post">
+        <div class="form-group">
+          <input type="text" name="plantID" value="<?php echo $plantID; ?>" hidden/>
+        </div>
+  			<button type="submit" class="btn btn-warning" value="abandonPlant" name="abandonPlant">
+  				Abandon Plant #<?php echo $plantID . "?"; ?>
+  			</button>
+          <p>This will archive the plant, no changes can be made but you can
+            still review the information.
+          </p>
+  		</form>
+    </div>
+  </div>
+  <div class="col-md-6 headerPad tc">
+    <div class="deletePlantForm">
+      <form method="post">
+        <div class="form-group">
+          <input type="text" name="plantID" value="<?php echo $plantID; ?>" hidden/>
+        </div>
+  			<button type="submit" class="btn btn-danger" value="deletePlant" name="deletePlant">
+  				Permanently Delete Plant #<?php echo $plantID . "?"; ?>
+  			</button>
+        <p>This plant will be permanently deleted with no possibility of
+          recovering the informaiton.
+        </p>
+  		</form>
+    </div>
+  </div>
+</div> <!--END MAIN CONTENT -->

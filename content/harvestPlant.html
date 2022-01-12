@@ -1,0 +1,42 @@
+<!-- MAIN CONTENT -->
+<div class="row">
+  <div class="col-md-12 headerPad">
+    <h2 class="tc">Harvest Plant #<?php echo $plantID . " " . $strain; ?></h2>
+    <!-- form -->
+    <div class="addForm">
+      <form method="post" action="/scripts/harvestPlant.php" role="addForm">
+        <div class="form-group">
+          <input type="text" name="plantID" value="<?php echo $plantID; ?>" hidden/>
+          <input type="text" name="growLocationUpdate" value="" hidden/>
+          <input type="text" name="statusUpdate" value="Harvested" hidden/>
+        </div>
+
+  			<div class="form-group">
+  				<label for="harvestDate">
+  					Harvest Date:
+  				</label>
+  				<input value="<?php echo $currentDate; ?>" type="date" class="form-control" id="harvestDate" name="harvestDate"/>
+  			</div>
+
+  			<div class="form-group">
+  				<label for="yield">
+  					Yield (in grams):
+  				</label>
+  				<input type="number" class="form-control" id="yield" name="yield"/>
+  			</div>
+
+  			<div class="form-group">
+  				<label for="commentsUpdate">
+  					Comments
+  				</label>
+  				<textarea class="form-control" cols="10" rows="4" id="commentsUpdate" name="commentsUpdate"><?php echo $comments; ?></textarea>
+  			</div>
+
+
+  			<button type="submit" class="btn btn-primary" value="addPlant" name="addPlant">
+  				Harvest Plant
+  			</button>
+  		</form>
+    </div>
+  </div>
+</div> <!--END MAIN CONTENT -->

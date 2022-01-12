@@ -1,0 +1,45 @@
+DB Structure for ectorGrow_plants
+- plantID
+- userID
+- strain
+- origin
+  - Clone
+  - Seed
+- startDate
+  - format = YYYY-MM-DD
+- transferDate
+  - format = YYYY-MM-DD
+- harvestDate
+  - format = YYYY-MM-DD
+- harvestYield
+- status
+  - Veg
+  - Flower
+  - Harvested
+  - Abandoned
+- growMedium
+  - Hydro
+  - Soil
+- growLocation
+  - Veg_SoilA
+  - Veg_SoilB
+  - Veg_HydroA
+  - Veg_HydroB
+  - Flower_SoilA
+  - Flower_SoilB
+  - Flower_HydroA
+  - Flower_HydroB
+- comments
+
+
+DB Structure for ectorGrow_users
+- userID
+- username
+- firstName
+- lastName
+- email
+- password
+- registered
+- access level
+- strains
+- growLocations

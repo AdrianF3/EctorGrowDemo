@@ -1,0 +1,253 @@
+<!-- MAIN CONTENT -->
+<div class="row">
+  <div class="col-md-12 headerPad">
+    <h2 class="tc">Edit Plant # <?php echo $plantID; ?></h2>
+    <div class="alert alert-success alertSizing" role="alert">
+      <h4 class="alert-heading">Tip!</h4>
+      <hr>
+      <p class="tc">Changes to 'Strain' & 'Grow Locations' are managed under My Profile.</p>
+    </div>
+    <!-- form -->
+    <div class="addForm">
+    <form method="post" action="/scripts/plantEdit.php" role="addForm">
+      <div class="form-group">
+        <input type="text" name="plantID" value="<?php echo $plantID; ?>" hidden/>
+      </div>
+
+				<div class="form-group">
+					<label for="strainUpdate">
+						Strain
+					</label>
+          <select class="form-control" name="strainUpdate" id="strainUpdate">
+            <option value="<?php echo $strain; ?>">Current: <?php echo $strain; ?></option>
+            <?php displayUserSeedsForm(); ?>
+          </select>
+					<!-- <input type="text" class="form-control" id="strainUpdate" name="strainUpdate" value="<?php echo $strain; ?>" required/> -->
+				</div>
+
+				<div class="form-group">
+					<label for="originInput">
+						Origin
+					</label>
+          <select class="form-control" name="originUpdate" required>
+            <!-- if else to display based on db -->
+            <?php if($origin = 'Clone') {
+              echo '<option selected value="Clone">Clone</option>
+              <option value="Seed">Seed</option>';
+            } else {
+              echo '<option value="Clone">Clone</option>
+              <option selected value="Seed">Seed</option>';
+            } ?>
+
+          </select>
+				</div>
+
+				<div class="form-group">
+					<label for="startDateUpdate">
+						Start Date:
+					</label>
+					<input value="<?php echo $startDate; ?>" type="date" class="form-control" id="startDateUpdate" name="startDateUpdate" required />
+				</div>
+
+				<div class="form-group">
+					<label for="transferDateUpdate">
+						Transfer Date:
+					</label>
+					<input value="<?php echo $transferDate; ?>" type="date" class="form-control" id="transferDateUpdate" name="transferDateUpdate"/>
+				</div>
+
+				<div class="form-group">
+					<label for="statusUpdate">
+						Status
+					</label>
+          <select class="form-control" name="statusUpdate" required>
+            <?php
+            switch ($status) {
+              case "Veg":
+                echo '<option selected value="Veg">Veg</option>
+                <option value="Flower">Flower</option>
+                <option value="Harvested">Harvested</option>
+                <option value="Abandoned">Abandoned</option>';
+                break;
+              case "Flower":
+                echo '<option value="Veg">Veg</option>
+                <option selected value="Flower">Flower</option>
+                <option value="Harvested">Harvested</option>
+                <option value="Abandoned">Abandoned</option>';
+                break;
+              case "Harvested":
+                echo '<option value="Veg">Veg</option>
+                <option value="Flower">Flower</option>
+                <option selected value="Harvested">Harvested</option>
+                <option value="Abandoned">Abandoned</option>';
+                break;
+              case "Abandoned":
+                echo '<option value="Veg">Veg</option>
+                <option value="Flower">Flower</option>
+                <option value="Harvested">Harvested</option>
+                <option selected value="Abandoned">Abandoned</option>';
+                break;
+              default:
+                echo '<option value="Veg">Veg</option>
+                <option value="Flower">Flower</option>
+                <option value="Harvested">Harvested</option>';
+            }
+            ?>
+
+
+          </select>
+				</div>
+
+				<div class="form-group">
+					<label for="growMediumUpdate" required>
+						Grow Medium
+					</label>
+          <select class="form-control" name="growMediumUpdate">
+            <?php if($growMedium == 'Soil') {
+              echo '<option selected value="Soil">Soil</option>
+              <option value="Hydro">Hydro</option>';
+            } else {
+              echo '<option value="Soil">Soil</option>
+              <option selected value="Hydro">Hydro</option>';
+            } ?>
+
+
+
+          </select>
+				</div>
+
+				<div class="form-group">
+					<label for="growLocationUpdate" required>
+						Grow Location
+					</label>
+          <select class="form-control" name="growLocationUpdate">
+            <option value="<?php echo $growLocation; ?>">Current: <?php echo $growLocation; ?></option>
+            <?php displayUserGrowLocationsForm(); ?>
+          </select>
+          <!-- <select class="form-control" name="growLocationUpdate">
+
+            <?php
+            switch ($growLocation) {
+              case "Veg_SoilA":
+                echo '<option selected value="Veg_SoilA">Veg_SoilA</option>
+                <option value="Veg_SoilB">Veg_SoilB</option>
+                <option value="Veg_HydroA">Veg_HydroA</option>
+                <option value="Veg_HydroB">Veg_HydroB</option>
+                <option value="Flower_SoilA">Flower_SoilA</option>
+                <option value="Flower_SoilB">Flower_SoilB</option>
+                <option value="Flower_HydroA">Flower_HydroA</option>
+                <option value="Flower_HydroB">Flower_HydroB</option>';
+                break;
+              case "Veg_SoilB":
+                echo '<option value="Veg_SoilA">Veg_SoilA</option>
+                <option selected value="Veg_SoilB">Veg_SoilB</option>
+                <option value="Veg_HydroA">Veg_HydroA</option>
+                <option value="Veg_HydroB">Veg_HydroB</option>
+                <option value="Flower_SoilA">Flower_SoilA</option>
+                <option value="Flower_SoilB">Flower_SoilB</option>
+                <option value="Flower_HydroA">Flower_HydroA</option>
+                <option value="Flower_HydroB">Flower_HydroB</option>';
+                break;
+              case "Veg_HydroA":
+                echo '<option value="Veg_SoilA">Veg_SoilA</option>
+                <option value="Veg_SoilB">Veg_SoilB</option>
+                <option selected value="Veg_HydroA">Veg_HydroA</option>
+                <option value="Veg_HydroB">Veg_HydroB</option>
+                <option value="Flower_SoilA">Flower_SoilA</option>
+                <option value="Flower_SoilB">Flower_SoilB</option>
+                <option value="Flower_HydroA">Flower_HydroA</option>
+                <option value="Flower_HydroB">Flower_HydroB</option>';
+                break;
+              case "Veg_HydroB":
+                echo '<option value="Veg_SoilA">Veg_SoilA</option>
+                <option value="Veg_SoilB">Veg_SoilB</option>
+                <option value="Veg_HydroA">Veg_HydroA</option>
+                <option selected value="Veg_HydroB">Veg_HydroB</option>
+                <option value="Flower_SoilA">Flower_SoilA</option>
+                <option value="Flower_SoilB">Flower_SoilB</option>
+                <option value="Flower_HydroA">Flower_HydroA</option>
+                <option value="Flower_HydroB">Flower_HydroB</option>';
+                break;
+              case "Flower_SoilA":
+                echo '<option value="Veg_SoilA">Veg_SoilA</option>
+                <option value="Veg_SoilB">Veg_SoilB</option>
+                <option value="Veg_HydroA">Veg_HydroA</option>
+                <option value="Veg_HydroB">Veg_HydroB</option>
+                <option selected value="Flower_SoilA">Flower_SoilA</option>
+                <option value="Flower_SoilB">Flower_SoilB</option>
+                <option value="Flower_HydroA">Flower_HydroA</option>
+                <option value="Flower_HydroB">Flower_HydroB</option>';
+                break;
+              case "Flower_SoilB":
+                echo '<option value="Veg_SoilA">Veg_SoilA</option>
+                <option value="Veg_SoilB">Veg_SoilB</option>
+                <option value="Veg_HydroA">Veg_HydroA</option>
+                <option value="Veg_HydroB">Veg_HydroB</option>
+                <option value="Flower_SoilA">Flower_SoilA</option>
+                <option selected value="Flower_SoilB">Flower_SoilB</option>
+                <option value="Flower_HydroA">Flower_HydroA</option>
+                <option value="Flower_HydroB">Flower_HydroB</option>';
+                break;
+              case "Flower_HydroA":
+                echo '<option value="Veg_SoilA">Veg_SoilA</option>
+                <option value="Veg_SoilB">Veg_SoilB</option>
+                <option value="Veg_HydroA">Veg_HydroA</option>
+                <option value="Veg_HydroB">Veg_HydroB</option>
+                <option value="Flower_SoilA">Flower_SoilA</option>
+                <option value="Flower_SoilB">Flower_SoilB</option>
+                <option selected value="Flower_HydroA">Flower_HydroA</option>
+                <option value="Flower_HydroB">Flower_HydroB</option>';
+                break;
+              case "Flower_HydroB":
+                echo '<option value="Veg_SoilA">Veg_SoilA</option>
+                <option value="Veg_SoilB">Veg_SoilB</option>
+                <option value="Veg_HydroA">Veg_HydroA</option>
+                <option value="Veg_HydroB">Veg_HydroB</option>
+                <option value="Flower_SoilA">Flower_SoilA</option>
+                <option value="Flower_SoilB">Flower_SoilB</option>
+                <option value="Flower_HydroA">Flower_HydroA</option>
+                <option selected value="Flower_HydroB">Flower_HydroB</option>';
+                break;
+              default:
+                echo '<option value="Veg_SoilA">Veg_SoilA</option>
+                <option value="Veg_SoilB">Veg_SoilB</option>
+                <option value="Veg_HydroA">Veg_HydroA</option>
+                <option value="Veg_HydroB">Veg_HydroB</option>
+                <option value="Flower_SoilA">Flower_SoilA</option>
+                <option value="Flower_SoilB">Flower_SoilB</option>
+                <option value="Flower_HydroA">Flower_HydroA</option>
+                <option value="Flower_HydroB">Flower_HydroB</option>';
+            }
+            ?>
+          </select> -->
+				</div>
+
+        <div class="form-group">
+					<label for="harvestDateUpdate">
+						Harvest Date:
+					</label>
+					<input value="<?php echo $harvestDate; ?>" type="date" class="form-control" name="harvestDateUpdate" />
+				</div>
+
+				<div class="form-group">
+					<label for="harvestYieldUpdate">
+						Yield (in grams)
+					</label>
+					<input type="number" class="form-control" id="harvestYieldUpdate" name="harvestYieldUpdate" value="<?php echo $harvestYield; ?>" />
+				</div>
+
+				<div class="form-group">
+					<label for="commentsUpdate">
+						Comments
+					</label>
+					<textarea class="form-control" cols="10" rows="4" id="commentsUpdate" name="commentsUpdate"><?php echo $comments; ?></textarea>
+				</div>
+
+
+				<button type="submit" class="btn btn-primary" value="addPlant" name="addPlant">
+					Submit Update
+				</button>
+			</form>
+    </div>
+  </div>
+</div> <!--END MAIN CONTENT -->

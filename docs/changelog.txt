@@ -1,0 +1,21 @@
+EctorGrow.com Changelog
+**Begining 6/28/21 with version: 0.37**
+
+
+** BEGIN 0.37 to 0.38 || 6/28/21 **
+  - Description: Update to deleting a plant, adds an option to abandon the plant so it stays
+    in the database. Alternatively, the new workflow will act as a second
+    confirmation before permanently deleting the plant from the database.
+
+  - Implementation: Similar workflow to transferring a plant from veg to flower
+    status - when user selects to delete a plant, they will be taken to a page
+    including a form that will allow them to abandon or permanently delete the
+    plant.
+** END 0.37 to 0.38 || 6/28/21 **
+
+** BEGIN 0.38 to 0.39 || 6/28/21 **
+  - Description: Update to harvesting a plant to make functionality similar to
+    transferring a plant from veg to flower.
+
+  - Implementation: As described. 
+** END 0.37 to 0.38 || 6/28/21 **

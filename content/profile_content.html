@@ -1,0 +1,51 @@
+<!-- MAIN CONTENT -->
+<div class="row">
+  <div class="col-md-12 profileForm">
+    <table class="profileTable tc">
+      <tr><th colspan="3"><h2>My Profile</h2></th></tr>
+      <tr>
+        <td><h3>Name</h3></td>
+        <td><h3>Email</h3></td>
+        <td><h3>Registered On</h3></td>
+      </tr>
+      <tr>
+        <td><?php echo $fName . " " . $lName; ?></td>
+        <td><?php echo $email; ?></td>
+        <td><?php echo $registered; ?></td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <a href="http://ectorgrow.com/editprofile.php">
+            <button type="submit" class="btn btn-primary">
+              Edit Profile
+            </button>
+          </a>
+          <a href="http://ectorgrow.com/reset-password.php">
+            <button type="submit" class="btn btn-warning">
+              Reset Password
+            </button>
+          </a>
+        </td>
+      </tr>
+    </table>
+    <br>
+
+  <!-- </div> -->
+
+    <div class="row">
+      <div class="col-md-6 midDivSizing">
+        <h3>Managed Seeds</h3>
+        <p>
+          <?php displayUserSeeds($seeds); ?>
+        </p>
+      </div>
+      <div class="col-md-6 midDivSizing">
+        <h3>Grow Locations</h3>
+        <p>
+          <?php displayUserGrowLocations($growLocations); ?>
+        </p>
+      </div>
+    </div>
+
+</div>
+</div><!--END MAIN CONTENT -->

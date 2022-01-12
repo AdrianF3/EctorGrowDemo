@@ -1,0 +1,35 @@
+<!-- MAIN CONTENT -->
+<div class="row">
+  <div class="col-md-12 headerPad">
+  <h2 class="textCenter">Nutrient Chart</h2>
+  <div class="alert alert-success alertSizing" role="alert">
+    <h4 class="alert-heading">Tip!</h4>
+    <p>
+        <ul>
+          <li>Plants repeat week three until they are transfered to the
+          flower phase of growth</li>
+          <li>Based on a personal nutrient schedule, more updates coming to
+          personalize your own nutrient schedule</li>
+        </ul>
+    </p>
+    <hr>
+    <p class="tc">*Calculated for a hydroponic grow using 5 gallon buckets*</p>
+  </div>
+
+  <table class="nutrientsTable">
+    <tr>
+      <th>Current Week</th>
+      <th>Flora Micro</th>
+      <th>Flora Gro</th>
+      <th>Flora Bloom</th>
+      <th>Cal Mag</th>
+      <th>Your Active Plants</th>
+    </tr>
+    <?php nutrientOutput(); ?>
+  </table>
+  </div>
+  <div class="col-md-12 currentOutput">
+    <?php calculateDays(); ?>
+  </div>
+
+</div> <!--END MAIN CONTENT -->
