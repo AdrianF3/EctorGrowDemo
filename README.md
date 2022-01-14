@@ -17,7 +17,7 @@ http://ectorgrowv1.afwebdev.com/login.php
     I originally strucutred this project where all urls were PHP files that would first make calls to the database in order to load relevant data & manage sessions and authentication. After processing the data, the PHP files 'include' html files that would begin to fill the DOM. 
 </p>
 <p>
-    For certain pages, like myplants.php, additional PHP scripts and HTML files are called when loading more complex content.
+    For certain pages, like myplants.php, additional PHP scripts and HTML files are called when loading more complex content, for example
 
     - myplants.php begins to process data, authenticate the user and load the DOM
     - content/myPlants_content.html loads some more DOM content and using PHP, includes a script for processing flower plant data, more dom content, followed by a similar but seperate call for vegetative plant data
@@ -25,7 +25,7 @@ http://ectorgrowv1.afwebdev.com/login.php
     - The 'components' called (components/veg_plantCard.html & components/flower_plantCard.html) display the final dom content, essentially a Bootstrap Card that displays plant data
 </p>
 <p>
-    No, I don't really know why I chose to develop things this way, it certainly was over complicated and unnesary... but ironically, it did make the transition to learning React, and calling components, much, much easier. 
+    No, I don't really know why I chose to develop things this way. It is more complicated than it needed to be, way to many includes and yah, a good lesson to learn from. Ironically, it did make the transition to learning React, and using components, much, much easier. 
 </p>
 
     
