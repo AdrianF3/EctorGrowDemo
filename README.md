@@ -1,6 +1,5 @@
 #  EctorGrow 
-## Formerly EctorGrow.com 
-## Currently EctorGrowV1.AFwebdev.com
+### Formerly EctorGrow.com | Currently EctorGrowV1.AFwebdev.com
 
 
 http://ectorgrowv1.afwebdev.com/login.php
