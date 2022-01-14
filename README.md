@@ -1,9 +1,6 @@
 #  EctorGrow 
 ### Formerly EctorGrow.com | Currently EctorGrowV1.AFwebdev.com
 
-
-http://ectorgrowv1.afwebdev.com/login.php
-
 <p>
     This website was developed to help users organize and manage their personal cannabis grow. Allowing users to add/edit/delete information about their plants, growing spaces and more. This allows users to track the development of their plants and manage it accordingly.
 </p>
