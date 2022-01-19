@@ -60,7 +60,7 @@ if(!isset($_SESSION["id"])) {
   //  - display overall totals as I do now.
   echo '<table class="annualTotalsTable tc">
     <tr>
-      <th colspan="2"><h2>Harvest Totals for 2021</h2></th>
+      <th colspan="2"><h2>Harvest Totals for 2022</h2></th>
     </tr>
     <tr>
       <th>Strain</th>
