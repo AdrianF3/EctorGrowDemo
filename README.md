@@ -35,8 +35,8 @@
 </p>
 
 ### Demo Credentials:
-- username: ###
-- password: ###  
+- username: demoEctor
+- password: Password
 
 ## Credits
 <p>    
