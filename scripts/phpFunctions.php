@@ -7,7 +7,7 @@ if (isset($_COOKIE['userID'])) {
 
   // echo "oldUserID: " . $oldUserID;
   echo "If you are experiencing any issues, you may need to
-    <a href='http://ectorgrow.com/scripts/logout.php'>log in again</a>";
+    <a href='http://ectorgrowv1.afwebdev.com/scripts/logout.php'>log in again</a>";
   // code...
 }
 // $oldUserID = $_COOKIE['userID'];
@@ -41,9 +41,9 @@ function sessionCheck() {
 
 function isLoggedIn() {
   if(!isset($_SESSION["id"])) {
-    echo "<a class='nav-link' href='http://ectorgrow.com/login.php'>Log-In</a>";
+    echo "<a class='nav-link' href='http://ectorgrowv1.afwebdev.com/login.php'>Log-In</a>";
   } else {
-    echo "<a class='nav-link' href='http://ectorgrow.com/login.php'>Log-Out</a>";
+    echo "<a class='nav-link' href='http://ectorgrowv1.afwebdev.com/login.php'>Log-Out</a>";
   }
 }
 
@@ -52,7 +52,7 @@ function deletePlant($plantDeleteID) {
   $sql = "DELETE FROM `ectorGrow_plants` WHERE `plantID` = $plantDeleteID";
   if ($conn->query($sql) === TRUE) {
     //echo "Record deleted successfully for plantID: " . $plantDeleteID;
-    echo "<meta http-equiv='refresh' content='1; URL=http://ectorgrow.com/myplants.php' />";
+    echo "<meta http-equiv='refresh' content='1; URL=http://ectorgrowv1.afwebdev.com/myplants.php' />";
   } else {
     echo "Error deleting your plant from the databse - Error report-> " . $conn->error;
   }
@@ -70,7 +70,7 @@ function abandonPlant($plantAbandonID) {
 
   if ($conn->query($sql) === TRUE) {
     //echo "Plant status successfully changed to 'Abandoned' - redirecting";
-    echo "<meta http-equiv='refresh' content='1; URL=http://ectorgrow.com/myplants.php' />";
+    echo "<meta http-equiv='refresh' content='1; URL=http://ectorgrowv1.afwebdev.com/myplants.php' />";
   } else {
     echo "Error updating record: " . $conn->error;
   }
@@ -120,7 +120,7 @@ function plantAccessVer($plantIDCheck) {
     // echo "Access to edit this plant is valid";
   } else {
     echo "Error - You do not have permission to edit this plant!";
-    echo "<meta http-equiv='refresh' content='3; URL=http://ectorgrow.com/myplants.php' />";
+    echo "<meta http-equiv='refresh' content='3; URL=http://ectorgrowv1.afwebdev.com/myplants.php' />";
   }
 }
 
@@ -149,7 +149,7 @@ function menuDisplay() {
   //level 1 -> default or normal menu
   //level 4 -> admin menu
   if(!isset($_SESSION["id"])) {
-    //echo "<meta http-equiv='refresh' content='3; URL=http://ectorgrow.com/login.php' />";
+    //echo "<meta http-equiv='refresh' content='3; URL=http://ectorgrowv1.afwebdev.com/login.php' />";
     include 'components/menu_1_nonuser.html';
   } else {
     //Display default menu

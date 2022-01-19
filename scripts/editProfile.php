@@ -21,7 +21,7 @@ WHERE `userID` = '$userID'"; //working
 
 if ($conn->query($sql) === TRUE) {
   echo "Record updated successfully - redirecting";
-  echo "<meta http-equiv='refresh' content='0; URL=http://ectorgrow.com/profile.php' />";
+  echo "<meta http-equiv='refresh' content='0; URL=http://ectorgrowv1.afwebdev.com/profile.php' />";
 } else {
   echo "Error updating record: " . $conn->error;
 }
