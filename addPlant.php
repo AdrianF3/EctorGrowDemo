@@ -21,7 +21,7 @@ if (isset($_POST['addPlant'])) {
 
   if ($conn->query($sql) === TRUE) {
     // echo "New record created successfully";
-    echo "<meta http-equiv='refresh' content='0; URL=http://ectorgrow.com/myplants.php' />";
+    echo "<meta http-equiv='refresh' content='0; URL=http://ectorgrowv1.afwebdev.com/myplants.php' />";
     } else {
       echo "Error: " . $sql . "<br>" . $conn->error;
   }
