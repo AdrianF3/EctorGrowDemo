@@ -17,6 +17,6 @@ session_destroy();
 
 // Redirect to login page
 // header("location: login2.php");
-echo "<meta http-equiv='refresh' content='0; URL=http://ectorgrow.com/login.php' />";
+echo "<meta http-equiv='refresh' content='0; URL=http://ectorgrowv1.afwebdev.com/login.php' />";
 exit;
 ?>
